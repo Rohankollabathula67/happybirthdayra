@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+--wescrollbar-thumb {
+  background-color: #43062e;
+  border-radius: 10px;
+}
+
+/* Simple SVG cursor — fast and easy */
+
+
+body {
+  height: 250vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(63, 4, 54);
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  cursor: none;
+}
+svg #line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  stroke-miterlimit: 4;
+
+  stroke-opacity: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 4s linear infinite;
+}
+svg #point {
+  fill: none;
+  stroke: #f00000;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: .1;
+  stroke-opacity: 1;
+  stroke-dasharray: .0001, .9999;
+  stroke-dashoffset: 1;
+  animation: dash 4s linear infinite;
+
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+/*Animation from left to right letter by letter*/
+.wish-text{
+
+  font-family:  "Fleur De Leah", cursive;
+  font-size: 78px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+.heart {
+    position: fixed;
+    color: #fffdfd;
+    font-size: 2px;
+    animation: float 10s ease-out forwards;
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+@keyframes float {
+0% {
+    transform: scale(1) translateY(0);
+    opacity: 0.12;
+}
+100% {
+    transform: scale(2) translateY(-80px);
+    opacity: 0;
+}
+
+}
+
+.life-card {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.proposal-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.proposal-card{
+  height: auto;
+  width: 280px;
+  margin-top: 0px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial', sans-serif;
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: px;
+}
+
+.proposal-card:hover {
+  transform: translateY(-10px);
+  transform: translateX(55px);
+  transform: rotateX(10deg);
+  transform: rotateY(10deg);
+
+  transition: transform 0.8s ease;
+}
+
+.conditonal-statment{
+  margin-left: 20px;
+  color: orange;
+}
+
+.file-name{
+    /* font-weight: bold; */
+    font-size: 16px;
+    color: #ff66cc8d;
+    text-decoration: none;
+    font-style: italic;
+    margin-right: 10px;
+    margin-top: 5px;
+    background: #350424;
+    padding: 5px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+.deepest-message-container{
+  margin-top: 30px;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+  background-color: #000000a2;
+  height: 300px;
+  width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.terminal-heading{
+  align-self: center;
+  color: #fff;
+}
+
+.terminal-heading-arrow{
+  padding: 6px;
+  width: 30px;
+  margin: 10px;
+  text-decoration: line-through;
+}
+
+
+.deepest-message{
+  color: #209a3f;
+  font-size: 24px;
+  font-family: "VT323", monospace;
+  animation: fadeIn 5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 18px;
+    background: #ff66cc;
+    transform: rotate(45deg);
+    z-index: 99999999999999999;
+    pointer-events: none;
+}
+
+#custom-cursor::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #ff66cc;
+    border-radius: 50%;
+}
+
+#custom-cursor::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background: #ff66cc;
+    border-radius: 50%;
+}
+
+
